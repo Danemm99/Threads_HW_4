@@ -3,13 +3,11 @@ import socket
 import threading
 
 def handle_client(client_socket):
-    # Функція обробки клієнтських запитів
+
     while True:
         data = client_socket.recv(1024).decode('utf-8')
         print("Отримано від клієнта:", data)
-        # Логіка обробки отриманого повідомлення
 
-        # Відправляємо відповідь клієнту
         response = "Відповідь від сервера"
         client_socket.send(response.encode('utf-8'))
 
